@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+	
+	<title>Q4 Practice 3</title>
+
+	<style>
+		#name {
+			color: royalblue;
+		}
+		body {
+			background-color: lightblue;
+			font-family: Trebuchet MS;
+		}
+		img {
+			border-radius: 20%;
+			border: 5px solid midnightblue;
+		}
+		#num1 {
+			width: 150px;
+		}
+		#num2 {
+			width: 150px;
+		}
+
+	</style>
+</head>
+
+<body>
+<center>
+	<br><h1><b>Mathematics</b></h1>
+	<div class="col-md-6" id="box">
+		<form class="form-group">
+			<br><img src="https://i.pinimg.com/originals/2b/80/04/2b8004cbb4de5670cedc2070802ac6ad.gif">
+			<details ontoggle="message()">
+				<summary>Speak to <span id="name">Miss Cruz</span></summary>
+					<i>"Welcome! Today, I will be teaching you <span id="name">arithmetic, comparison, and logic</span>. Use the boxes to input data and use the buttons to compute."</i>
+			</details>
+			<br><br>
+			<label>Enter the value of X:</label>
+				<input type="number" class="form-control bg-primary text-light" id="num1">
+			<label>Enter the value of Y:</label>
+				<input type="number" class="form-control bg-primary text-light" id="num2">
+				<br>
+				<button type="submit" id="submit" onclick="multiply()"><span id="name">Multiplying</span> X and Y</button>
+				<button type="submit" id="submit" onclick="comparison()">Is X <span id="name">greater</span> than Y</button>
+				<br><br>
+				<button type="submit" id="submit" onclick="divide()"><span id="name">Quotient</span> of X and Y</button>
+				<button type="submit" id="submit" onclick="equal()">Checking <span id="name">equality</span> of X and Y</button>
+		</form>
+	</h5>
+
+	</div>
+</center>
+
+<br><br>
+
+<script type="text/javascript">
+
+function multiply(){
+	var num1 = document.getElementById("num1").value;
+	var num2 = document.getElementById("num2").value;
+	var multiply = Number(num1) * Number(num2);
+
+	alert(multiply);
+}
+function comparison(){
+	var num1 = document.getElementById("num1").value;
+	var num2 = document.getElementById("num2").value;
+	var comparison = (Number(num1) > Number(num2));
+
+	alert(comparison);
+}
+function divide(){
+	var num1 = document.getElementById("num1").value;
+	var num2 = document.getElementById("num2").value;
+	var divide = Number(num1) / Number(num2);
+
+	alert(divide);
+}
+function equal(){
+	var num1 = document.getElementById("num1").value;
+	var num2 = document.getElementById("num2").value;
+	var equal = (Number(num1) === Number(num2));
+
+	alert(equal);
+}
+
+</script>
+
+</body>
+</html>
